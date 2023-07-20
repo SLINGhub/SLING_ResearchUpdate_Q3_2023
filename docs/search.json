@@ -35,11 +35,11 @@
     "text": "Available Tools for Data Post-Processing\n\n\nIssues\n\nLimited and static options\nBy and for bioinformaticians\nBlackboxes for the end-user\nAssuming ‘perfect’ analyses and data\nData/metadata preparation often required\n\nAnalytical ‘Reality’\n\nProject Diversity\nMethods/Platform Diversity\nAnalytical performance/failures\nMistakes\nCommunication wet &lt;&gt; dry lab\n\n\nCommercial tools\n\nMS vendor software\nEXCEL / ‘in-house’ R\n\nPackages for lipidomics\n\nlipidr Mohamed et al. (2020)\n\nPackages for Metabolomics\n\npmp Jankevics et al. (2023)\nmetaX Wen et al. (2017)\ntidyMS Riquelme et al. (2020)\n\nProteomics/Transcriptomics\n\nDiverse Bioconductor packages"
   },
   {
-    "objectID": "index.html#midar---enabling-data-postprocessing-by-the-analysts",
-    "href": "index.html#midar---enabling-data-postprocessing-by-the-analysts",
+    "objectID": "index.html#midar---enabling-data-processing-by-the-analysts",
+    "href": "index.html#midar---enabling-data-processing-by-the-analysts",
     "title": "rbasel2023",
-    "section": "{MiDAR} - Enabling data postprocessing by the analysts",
-    "text": "{MiDAR} - Enabling data postprocessing by the analysts\n\n\nFor\n\nBioanalytical scientists and\nData scientists\nPublishing\n\nAims\n\nSupervised automation\nFlexible modular steps\nStandaridized and reproducible\nValidated\nData and Process sharing\nTool and libary\n\n\nWorkflow\n\nLab analyses data with {MiDAR}\nLab shares {MiDAR} project file\nData scientists support and amend\n{MiDAR} project file goes back to the lab\n\nChallenges\n\nLearning R\nUser acceptance\nScripts vs UI\nDevelopment Resources\n\n\nhttps://slinghub.github.io/midar/"
+    "section": "{MiDAR} - Enabling data processing by the analysts",
+    "text": "{MiDAR} - Enabling data processing by the analysts\n\n\nFor\n\nBioanalytical scientists and\nData scientists\nPublishing\n\nAims\n\nSupervised automation\nFlexible modular steps\nStandaridized and reproducible\nValidated\nData and Process sharing\nTool and libary\n\n\nWorkflow\n\nLab analyses data with {MiDAR}\nLab shares {MiDAR} project file\nData scientists support and amend\n{MiDAR} project file goes back to the lab\n\nChallenges\n\nLearning R\nUser acceptance\nScripts vs UI\nDevelopment Resources\n\n\nhttps://slinghub.github.io/midar/"
   },
   {
     "objectID": "index.html#data-and-metadata",
@@ -74,7 +74,7 @@
     "href": "index.html#qc-of-highly-dimensional-large-scale-data",
     "title": "rbasel2023",
     "section": "QC of highly-dimensional large-scale data",
-    "text": "QC of highly-dimensional large-scale data\n\nLipidomics analysis of 5000 samples took ~ 6 months, of which 2-3 months instrument time"
+    "text": "QC of highly-dimensional large-scale data\n\nLipidomics analysis of 5000 samples took ~ 6 months, of which 2-3 months were instrument time"
   },
   {
     "objectID": "index.html#qc-plots-as-sharable-html-pages",
