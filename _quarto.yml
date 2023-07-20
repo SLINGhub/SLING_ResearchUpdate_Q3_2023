@@ -1,6 +1,6 @@
 project:
   title: "rbasel2023"
   type: website
+  output-dir: docs
 
-editor: visual
 

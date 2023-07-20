@@ -197,7 +197,7 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 
 
 ```{r }
-#| echo: true
+#| echo: false
 #| output: false
 library(tidyverse)
 library(knitr)
@@ -333,6 +333,11 @@ mexp
 
 ```
 
+## Outlook
+
+- Development
+- Collaborations
+- UI (Shiny)
 
 ## Acknowledgements
 
