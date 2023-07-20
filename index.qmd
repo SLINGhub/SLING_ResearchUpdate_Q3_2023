@@ -131,7 +131,7 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 :::
 :::
 
-## {MiDAR} - Enabling data postprocessing by the analysts {.smaller}
+## {MiDAR} - Enabling data processing by the analysts {.smaller}
 
 ::: columns
 ::: {.column width="50%" style="font-size: 28px;"}
