@@ -20,11 +20,6 @@ format:
     citations-hover: true
     footnotes-hover: true  
     code-annotations: hover
-title-slide-attributes: 
-  data-background-image: ./images/SLING_banner.png ./images/nus_logo.png;
-  background-repeat: no-repeat;
-  data-background-size: 25% 25% 
-  data-background-position: 2% 2% 20% 20%
 bibliography: references.bib
 csl: apa-old-doi-prefix.csl
 execute:
