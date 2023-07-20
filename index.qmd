@@ -219,7 +219,7 @@ meta_path <- system.file("extdata", "Example_Metadata_1.xlsm", package = "midar"
 ```{r}
 #| echo: true
 #| output: false
-#| code-line-numbers: 13|5-6|8-9|11-12
+#| code-line-numbers: 1-3|5-6|8-9|11-12
 library(midar)
 
 mexp <- MidarExperiment()
@@ -279,9 +279,9 @@ mexp <- corr_drift_loess(
 
 ## QC of highly-dimensional large-scale data
 
-::: {style="font-size: 22px; font-weight: 50; color: #787777;"} 
+::: {style="font-size: 20px; font-weight: 50; color: #787777;"} 
 
-Lipidomics analysis of 5000 samples took ~ 6 months, of which 2-3 months instrument time
+Lipidomics analysis of 5000 samples took ~ 6 months, of which 2-3 months were instrument time
 
 :::
 
