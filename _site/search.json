@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "rbasel2023",
+    "section": "",
+    "text": "{MiDAR}\n\n\nSmall Molecule Mass Spectrometry Large-Scale Data Processing, Quality Control, Analysis and Reporting\n\n\nR/Basel 2023\nBo Burla - Singapore Lipidomics Incubator - National University of Singapore"
+  },
+  {
+    "objectID": "index.html#sling",
+    "href": "index.html#sling",
+    "title": "rbasel2023",
+    "section": "SLING",
+    "text": "SLING\nSingapore Lipidomics Incubator\n\n\n\nFocus on clinical cohort studies\n\nWith academia, hospitals, and industry\nCollaborative or fee-for-service\nNUS-Agilent Hub (Video)\nConferences (isls11.eventengage.live)\nProf Markus R Wenk & Dr Anne K Bendt\n\nMore info: sling.sg"
+  },
+  {
+    "objectID": "index.html#big-interest-in-small-molecule-analyses",
+    "href": "index.html#big-interest-in-small-molecule-analyses",
+    "title": "rbasel2023",
+    "section": "Big Interest in Small Molecule Analyses",
+    "text": "Big Interest in Small Molecule Analyses\nMetabolites - Lipids - Signalling molecules - Natural Products - Drugs\n   \n\nBuergel et al. (2022), Huynh et al. (2020), Tan et al. (2022), Laaksonen et al. (2016)"
+  },
+  {
+    "objectID": "index.html#mass-spectrometry-based-workflow",
+    "href": "index.html#mass-spectrometry-based-workflow",
+    "title": "rbasel2023",
+    "section": "Mass Spectrometry-Based Workflow",
+    "text": "Mass Spectrometry-Based Workflow"
+  },
+  {
+    "objectID": "index.html#available-tools-for-data-post-processing",
+    "href": "index.html#available-tools-for-data-post-processing",
+    "title": "rbasel2023",
+    "section": "Available Tools for Data Post-Processing",
+    "text": "Available Tools for Data Post-Processing\n\n\nIssues\n\nLimited and static options\nBy and for bioinformaticians\nBlackboxes for the end-user\nAssuming ‘perfect’ analyses and data\nData/metadata preparation often required\n\nAnalytical ‘Reality’\n\nProject Diversity\nMethods/Platform Diversity\nAnalytical performance/failures\nMistakes\nCommunication wet &lt;&gt; dry lab\n\n\nCommercial tools\n\nMS vendor software\nEXCEL / ‘in-house’ R\n\nPackages for lipidomics\n\nlipidr Mohamed et al. (2020)\n\nPackages for Metabolomics\n\npmp Jankevics et al. (2023)\nmetaX Wen et al. (2017)\ntidyMS Riquelme et al. (2020)\n\nProteomics/Transcriptomics\n\nDiverse Bioconductor packages"
+  },
+  {
+    "objectID": "index.html#midar---enabling-data-postprocessing-by-the-analysts",
+    "href": "index.html#midar---enabling-data-postprocessing-by-the-analysts",
+    "title": "rbasel2023",
+    "section": "{MiDAR} - Enabling data postprocessing by the analysts",
+    "text": "{MiDAR} - Enabling data postprocessing by the analysts\n\n\nFor\n\nBioanalytical scientists and\nData scientists\nPublishing\n\nAims\n\nSupervised automation\nFlexible modular steps\nStandaridized and reproducible\nValidated\nData and Process sharing\nTool and libary\n\n\nWorkflow\n\nLab analyses data with {MiDAR}\nLab shares {MiDAR} project file\nData scientists support and amend\n{MiDAR} project file goes back to the lab\n\nChallenges\n\nLearning R\nUser acceptance\nScripts vs UI\nDevelopment Resources\n\n\nhttps://slinghub.github.io/midar/"
+  },
+  {
+    "objectID": "index.html#data-and-metadata",
+    "href": "index.html#data-and-metadata",
+    "title": "rbasel2023",
+    "section": "Data and Metadata",
+    "text": "Data and Metadata\n\n\nData\n\nVendor peak integration tool outputs\nOpen source tools (e.g. Teo et al. (2020))\nGeneric formats (incl. pre-processed data)\n\nMetadata\n\nAnalyses, Samples, Features, Calibration, exp. groups etc\nCSV or XLS(M) templates (github/slinghub)\nLIMS\n\n\n \n\n\n\nlibrary(tidyverse)\nlibrary(knitr)\nlibrary(here)\nlibrary(plotly)\nlibrary(patchwork)\nlibrary(midar)\nlibrary(plotly)\n\noptions(dplyr.print_min = 6, dplyr.print_max = 6)\ntheme_set(theme_gray(base_size = 18))\n\ndata_path &lt;- system.file(\"extdata\", \"Example_MHQuant_1.csv\", package = \"midar\", mustWork = TRUE)\nmeta_path &lt;- system.file(\"extdata\", \"Example_Metadata_1.xlsm\", package = \"midar\", mustWork = TRUE)"
+  },
+  {
+    "objectID": "index.html#basic-workflow",
+    "href": "index.html#basic-workflow",
+    "title": "rbasel2023",
+    "section": "Basic Workflow",
+    "text": "Basic Workflow\n\nlibrary(midar)\n\nmexp &lt;- MidarExperiment()\n\nmexp &lt;- read_masshunter_csv(mexp, file_dir_names = data_path)\nmexp &lt;- read_msorganizer_xlm(mexp, filename = meta_path)\n\nmexp &lt;- normalize_by_istd(mexp)\nmexp &lt;- quantitate_by_istd(mexp)\n\nmexp &lt;- calculate_qc_metrics(mexp)\nmexp &lt;- apply_qc_filter(mexp, CV_BQC_max = 20, SB_RATIO_min = 5, R2_min = 0.8, RQC_CURVE = 1)"
+  },
+  {
+    "objectID": "index.html#basic-workflow-1",
+    "href": "index.html#basic-workflow-1",
+    "title": "rbasel2023",
+    "section": "Basic Workflow",
+    "text": "Basic Workflow\n\nmexp &lt;- MidarExperiment()\n\nmexp &lt;- read_masshunter_csv(mexp, file_dir_names = data_path)\nmexp &lt;- read_msorganizer_xlm(mexp, filename = meta_path)\n\nmexp &lt;- normalize_by_istd(mexp)\nmexp &lt;- quantitate_by_istd(mexp)\n\nmexp &lt;- calculate_qc_metrics(mexp)\nmexp &lt;- apply_qc_filter(mexp, CV_BQC_max = 20, SB_RATIO_min = 5, R2_min = 0.8, RQC_CURVE = 1)"
+  },
+  {
+    "objectID": "index.html#another-example-drift-smoothing",
+    "href": "index.html#another-example-drift-smoothing",
+    "title": "rbasel2023",
+    "section": "Another example: Drift smoothing",
+    "text": "Another example: Drift smoothing\n\nmexp &lt;- corr_drift_loess(\n  data = mexp,\n  qc_types = \"BQC\",\n  within_batch = TRUE, \n  apply_conditionally = TRUE,\n  min_sample_cv_ratio_before_after = 1,\n  log2_transform = TRUE,\n  span = 0.75)"
+  },
+  {
+    "objectID": "index.html#qc-of-highly-dimensional-large-scale-data",
+    "href": "index.html#qc-of-highly-dimensional-large-scale-data",
+    "title": "rbasel2023",
+    "section": "QC of highly-dimensional large-scale data",
+    "text": "QC of highly-dimensional large-scale data\n\nLipidomics analysis of 5000 samples took ~ 6 months, of which 2-3 months instrument time"
+  },
+  {
+    "objectID": "index.html#qc-plots-as-sharable-html-pages",
+    "href": "index.html#qc-plots-as-sharable-html-pages",
+    "title": "rbasel2023",
+    "section": "QC Plots as sharable HTML pages",
+    "text": "QC Plots as sharable HTML pages\n\nplot_runscatter(data = mexp, \n                y_var = \"Intensity\", \n                feature_filter = \"^Cer|Hex3Cer|GM3\", \n                cap_values = TRUE, \n                show_batches = TRUE,\n                outputPDF = FALSE, \n                annot_scale = 1.9, point_size = 4) \n\n[1] \"Plotting 3 pages...\"\n[1] \"page 1\"\n\n\n\n\n\n[1] \"page 2\"\n\n\n\n\n\n[1] \"page 3\""
+  },
+  {
+    "objectID": "index.html#modifiable-midar-outputs",
+    "href": "index.html#modifiable-midar-outputs",
+    "title": "rbasel2023",
+    "section": "Modifiable {MiDAR} outputs",
+    "text": "Modifiable {MiDAR} outputs\n\nplt &lt;- plot_pca_qc(data = mexp, variable = \"Concentration\", \n                        log_transform = FALSE, dim_x = 1, dim_y = 2)\nggplotly(plt)"
+  },
+  {
+    "objectID": "index.html#share-data-and-process-steps",
+    "href": "index.html#share-data-and-process-steps",
+    "title": "rbasel2023",
+    "section": "Share data and process steps",
+    "text": "Share data and process steps\n\nprint(mexp)\nsave(mexp, \"D:/my-data/\")\n\n\n\n\n MidarExperiment \n \n   Data:  \n   • Samples:  215 \n   • Features:   428 \n \n   Metadata:  \n   • Sample annotation:  ✓ \n   • Feature annotation:  ✓ \n   • Internal standard annotation:  ✓ \n   • Response curves annotation:  ✓ \n   • Study samples annotation:  ✗ \n \n   Processing status:  Adjusted Quantitated Data \n \n   Processing:  \n   • ISTD normalized:  ✓ \n   • ISTD quantitated:  ✓ \n   • Drift corrected:  ✓ \n   • Batch corrected:  ✗ \n   • Interference (isotope) corrected:  ✗"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "rbasel2023",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nR/Basel organizers \nMarkus R. Wenk\nFederico Torta\nHyung Won Choi\nShanshan Ji\nAlicia Chan\nJeremy Selva\nAnne K. Bendt \n\nThis presenstation was made with Quarto with elements taken from https://github.com/garthtarr/sydney_quarto/"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "rbasel2023",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nBuergel, T., Steinfeldt, J., Ruyoga, G., Pietzner, M., Bizzarri, D., Vojinovic, D., … Landmesser, U. (2022). Metabolomic profiles predict individual multidisease outcomes. Nature Medicine, 28(11), 2309–2320. DOI: 10.1038/s41591-022-01980-3\n\n\nHuynh, K., Lim, W.L.F., Giles, C., Jayawardana, K.S., Salim, A., Mellett, N.A., … Meikle, P.J. (2020). Concordant peripheral lipidome signatures in two large clinical studies of Alzheimer’s disease. Nature Communications, 11(1), 5698. DOI: 10.1038/s41467-020-19473-7\n\n\nJankevics, A., Lloyd, G.R., & Weber, R.J.M. (2023). Pmp: Peak Matrix Processing and signal batch correction for metabolomics datasets. Manual. DOI: 10.18129/B9.bioc.pmp\n\n\nLaaksonen, R., Ekroos, K., Sysi-Aho, M., Hilvo, M., Vihervaara, T., Kauhanen, D., … Lüscher, T.F. (2016). Plasma ceramides predict cardiovascular death in patients with stable coronary artery disease and acute coronary syndromes beyond LDL-cholesterol. European Heart Journal, 37(25), 1967–1976. DOI: 10.1093/eurheartj/ehw148\n\n\nMohamed, A., Molendijk, J., & Hill, M.M. (2020). Lipidr: A Software Tool for Data Mining and Analysis of Lipidomics Datasets. Journal of Proteome Research, 19(7), 2890–2897. DOI: 10.1021/acs.jproteome.0c00082\n\n\nRiquelme, G., Zabalegui, N., Marchi, P., Jones, C.M., & Monge, M.E. (2020). A Python-Based Pipeline for Preprocessing LC for Untargeted Metabolomics Workflows. Metabolites, 10(10), 416. DOI: 10.3390/metabo10100416\n\n\nTan, S.H., Koh, H.W.L., Chua, J.Y., Burla, B., Ong, C.C., Teo, L.S.L., … Chan, M.Y. (2022). Variability of the Plasma Lipidome and Subclinical Coronary Atherosclerosis. Arteriosclerosis, Thrombosis, and Vascular Biology, 42(1), 100–112. DOI: 10.1161/ATVBAHA.121.316847\n\n\nTeo, G., Chew, W.S., Burla, B., HErr, D., Tai, E.S., Wenk, M., … Choi, H. (2020). MRMkit: Automated Data Processing for Large-Scale Targeted Metabolomics Analysis. Analytical Chemistry, 92(20), 13677–13682. DOI: 10.1021/acs.analchem.0c03060\n\n\nWen, B., Mei, Z., Zeng, C., & Liu, S. (2017). metaX: A flexible and comprehensive software for processing metabolomics data. BMC Bioinformatics, 18(1), 183. DOI: 10.1186/s12859-017-1579-y"
+  }
+]

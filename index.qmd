@@ -1,0 +1,352 @@
+---
+format: 
+  revealjs:
+    theme: [default, sling.scss]
+    toc: true
+    toc-depth: 1
+    slide-number: c
+    multiplex: true
+    transition: fade
+    background-transition: fade
+    preview-links: auto
+    pointer:
+      pointerSize: 24
+      color: '#32cd32'
+    highlight-style: github
+    revealjs-plugins:
+      - pointer
+    fig-format: retina
+    history: true # don't add each slide to browser history
+    citations-hover: true
+    footnotes-hover: true  
+    code-annotations: hover
+title-slide-attributes: 
+  data-background-image: ./images/SLING_banner.png ./images/nus_logo.png;
+  background-repeat: no-repeat;
+  data-background-size: 25% 25% 
+  data-background-position: 2% 2% 20% 20%
+bibliography: references.bib
+csl: apa-old-doi-prefix.csl
+execute:
+  echo: true
+---
+
+
+## {.title}
+
+::: {style="font-size: 120px; font-weight: 300; color: #024061; padding-top: 50px !important"}
+{MiDAR}
+:::
+
+::: {style="font-size: 40px; font-weight: 100; color: #3D7491"}
+Small Molecule Mass Spectrometry Large-Scale Data Processing, Quality Control, Analysis and Reporting
+:::
+
+::: {style="font-size: 24px; font-weight: 50; color: #3D7491; padding-top: 40px !important;"}
+R/Basel 2023
+
+Bo Burla - Singapore Lipidomics Incubator - National University of Singapore
+:::
+
+![](./images/SLING_banner.png){.absolute top="550" left="0" height="100"}
+
+## SLING
+
+Singapore Lipidomics **Incubator**
+
+::: columns
+::: {.column width="70%" style="font-size: 24px;"}
+-   Focus on clinical cohort studies   
+-   With academia, hospitals, and industry
+-   Collaborative or fee-for-service
+-   NUS-Agilent Hub [(Video)](https://www.youtube.com/watch?v=F_7IUfbDiwo)
+-   Conferences ([isls11.eventengage.live](https://isls11.eventengage.live "International Singapore Lipidomics Symposium"))
+-   Prof Markus R Wenk & Dr Anne K Bendt
+
+More info: [sling.sg](https://sling.sg)
+:::
+
+::: {.column width="40%" style="font-size: 24px;"}
+![](./images/SLINGphotoISLS2023.png){.absolute top="55" left="600" width="500" height="350"}
+:::
+:::
+
+![](./images/nus_logo.png){.absolute top="550" left="750" height="100"} ![](./images/logo-final_nus-agilent-hub.png){.absolute top="550" left="300" height="100"} ![](./images/SLING_banner.png){.absolute top="550" left="0" height="100"}
+
+## Big Interest in Small Molecule Analyses
+
+Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
+
+![](./images/Paper1.jpg){.absolute top="120" left="0" width="450" height="330"} ![](./images/Paper2.jpg){.absolute top="120" left="470" width="450" height="260"} ![](./images/Paper3b.jpg){.absolute top="450" left="0" width="450" height="230"} ![](./images/Paper4.jpg){.absolute top="400" left="470" width="450" height="270"}
+
+::: footer
+@buergel2022MetabolomicProfilesPredict, @huynh2020ConcordantPeripheralLipidome, @tan2022VariabilityPlasmaLipidome, @laaksonen2016PlasmaCeramidesPredict
+:::
+
+## Mass Spectrometry-Based Workflow
+
+![](./images/Workflow.png){.absolute top="80" left="0" width="1000" height="600"}
+
+## Available Tools for Data Post-Processing {.smaller}
+
+::: columns
+::: {.column width="60%" style="font-size: 24px;"}
+**Issues**
+
+-   Limited and static options
+-   *By* and *for* bioinformaticians
+-   Blackboxes for the end-user
+-   Assuming 'perfect' analyses *and* data
+-   Data/metadata preparation often required
+
+**Analytical 'Reality'**
+
+-   Project Diversity
+-   Methods/Platform Diversity
+-   Analytical performance/failures
+-   Mistakes
+-   Communication wet <> dry lab
+:::
+
+::: {.column width="40%" style="font-size: 24px color: #8a8a8a;"}
+**Commercial tools**
+
+-   MS vendor software
+
+-   EXCEL / 'in-house' R
+
+**Packages for lipidomics**
+
+-   *lipidr* @mohamed2020LipidrSoftwareTool
+
+**Packages for Metabolomics**
+
+-   *pmp* @jankevics2023pmp
+-   *metaX* @wen2017MetaXFlexibleComprehensive
+-   *tidyMS* @riquelme2020PythonBasedPipelinePreprocessing
+
+**Proteomics/Transcriptomics**
+
+-   Diverse Bioconductor packages
+:::
+:::
+
+## {MiDAR} - Enabling data postprocessing by the analysts {.smaller}
+
+::: columns
+::: {.column width="50%" style="font-size: 28px;"}
+**For**
+
+-   Bioanalytical scientists *and*
+-   Data scientists
+-   Publishing
+
+**Aims**
+
+-   Supervised automation
+-   Flexible modular steps
+-   Standaridized and reproducible
+-   Validated
+-   Data and *Process* sharing
+-   Tool and libary
+:::
+
+::: {.column width="50%" style="font-size: 28px;"}
+
+**Workflow**
+
+- Lab analyses data with {MiDAR}
+- Lab shares {MiDAR} project file
+- Data scientists support and amend
+- {MiDAR} project file goes back to the lab
+
+**Challenges**
+
+- Learning R
+- User acceptance
+- Scripts vs UI
+- Development Resources
+:::
+
+::: footer
+<https://slinghub.github.io/midar/>
+:::
+:::
+
+## Data and Metadata {.smaller}
+
+::: columns
+::: {.column width="40%" style="font-size: 24px;"}
+**Data**
+
+-   Vendor peak integration tool outputs
+-   Open source tools (e.g. @teo2020MRMkitAutomatedData)
+-   Generic formats (incl. pre-processed data) 
+
+**Metadata**
+
+-   Analyses, Samples, Features, Calibration, exp. groups etc
+-   CSV or XLS(M) templates [(github/slinghub)](https://github.com/SLINGhub/MSTemplate_Creator)
+-   **LIMS**
+:::
+
+::: {.column width="60%" style="font-size: 24px;"}
+![](./images/MSorganizer.jpg){.absolute top="30" left="550" width="450" height="330"} ![](./images/LIMS.jpg){.absolute top="360" left="550" width="455" height="320"}
+:::
+:::
+
+
+```{r }
+#| echo: true
+#| output: false
+library(tidyverse)
+library(knitr)
+library(here)
+library(plotly)
+library(patchwork)
+library(midar)
+library(plotly)
+
+options(dplyr.print_min = 6, dplyr.print_max = 6)
+theme_set(theme_gray(base_size = 18))
+
+data_path <- system.file("extdata", "Example_MHQuant_1.csv", package = "midar", mustWork = TRUE)
+meta_path <- system.file("extdata", "Example_Metadata_1.xlsm", package = "midar", mustWork = TRUE)
+```
+
+##  Basic Workflow {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| output: false
+#| code-line-numbers: 13|5-6|8-9|11-12
+library(midar)
+
+mexp <- MidarExperiment()
+
+mexp <- read_masshunter_csv(mexp, file_dir_names = data_path)
+mexp <- read_msorganizer_xlm(mexp, filename = meta_path)
+
+mexp <- normalize_by_istd(mexp)
+mexp <- quantitate_by_istd(mexp)
+
+mexp <- calculate_qc_metrics(mexp)
+mexp <- apply_qc_filter(mexp, CV_BQC_max = 20, SB_RATIO_min = 5, R2_min = 0.8, RQC_CURVE = 1)
+```
+
+## Basic Workflow {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| output: false
+#| message: false
+mexp <- MidarExperiment()
+
+mexp <- read_masshunter_csv(mexp, file_dir_names = data_path)
+mexp <- read_msorganizer_xlm(mexp, filename = meta_path)
+
+mexp <- normalize_by_istd(mexp)
+mexp <- quantitate_by_istd(mexp)
+
+mexp <- calculate_qc_metrics(mexp)
+mexp <- apply_qc_filter(mexp, CV_BQC_max = 20, SB_RATIO_min = 5, R2_min = 0.8, RQC_CURVE = 1)
+```
+
+::: {test}
+![](images/Output1.png){width="100%"}
+:::
+
+
+## Another example: Drift smoothing
+
+```{r}
+#| echo: true
+#| output: false
+#| message: false
+mexp <- corr_drift_loess(
+  data = mexp,
+  qc_types = "BQC",
+  within_batch = TRUE, 
+  apply_conditionally = TRUE,
+  min_sample_cv_ratio_before_after = 1,
+  log2_transform = TRUE,
+  span = 0.75)
+```
+
+::: {test}
+![](images/Output2.png){width="100%"}
+:::
+
+## QC of highly-dimensional large-scale data
+
+::: {style="font-size: 22px; font-weight: 50; color: #787777;"} 
+
+Lipidomics analysis of 5000 samples took ~ 6 months, of which 2-3 months instrument time
+
+:::
+
+![](./images/qcplot.jpg)
+
+
+## QC Plots as sharable HTML pages {.scrollable .smaller}
+
+```{r}
+#| echo: true
+#| fig-width: 16
+#| fig-height: 12
+plot_runscatter(data = mexp, 
+                y_var = "Intensity", 
+                feature_filter = "^Cer|Hex3Cer|GM3", 
+                cap_values = TRUE, 
+                show_batches = TRUE,
+                outputPDF = FALSE, 
+                annot_scale = 1.9, point_size = 4) 
+```
+
+## Modifiable {MiDAR} outputs {.smaller}
+
+```{r}
+#| echo: true
+#| fig-height: 5
+#| fig-width: 6
+#| fig-align: center
+
+plt <- plot_pca_qc(data = mexp, variable = "Concentration", 
+                        log_transform = FALSE, dim_x = 1, dim_y = 2)
+ggplotly(plt)
+```
+
+## Share data and process steps
+
+```{r}
+#| echo: true
+#| output: false
+#| eval: false
+print(mexp)
+save(mexp, "D:/my-data/")
+```
+
+```{r}
+#| echo: false
+#| output: true
+mexp
+
+```
+
+
+## Acknowledgements
+
+- R/Basel organizers
+<br/><br/>
+- Markus R. Wenk
+- Federico Torta
+- Hyung Won Choi
+- Shanshan Ji
+- Alicia Chan
+- Jeremy Selva
+- Anne K. Bendt
+<br/><br/>
+
+This presenstation was made with [Quarto](https://quarto.org/docs/presentations/revealjs/) with  elements taken from [https://github.com/garthtarr/sydney_quarto/](https://github.com/garthtarr/sydney_quarto/)
+
+## References {.biblio}
