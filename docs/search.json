@@ -32,14 +32,14 @@
     "href": "index.html#available-tools-for-data-post-processing",
     "title": "rbasel2023",
     "section": "Available Tools for Data Post-Processing",
-    "text": "Available Tools for Data Post-Processing\n\n\nIssues\n\nLimited and static options\nBy and for bioinformaticians\nBlackboxes for the end-user\nAssuming ‘perfect’ analyses and data\nData/metadata preparation often required\n\nAnalytical ‘Reality’\n\nProject Diversity\nMethods/Platform Diversity\nAnalytical performance/failures\nMistakes\nCommunication wet &lt;&gt; dry lab\n\n\nCommercial tools\n\nMS vendor software\nEXCEL / ‘in-house’ R\n\nPackages for lipidomics\n\nlipidr Mohamed et al. (2020)\n\nPackages for Metabolomics\n\npmp Jankevics et al. (2023)\nmetaX Wen et al. (2017)\ntidyMS Riquelme et al. (2020)\n\nProteomics/Transcriptomics\n\nDiverse Bioconductor packages"
+    "text": "Available Tools for Data Post-Processing\n\n\nIssues\n\nLimited and static functions\nBy and for bioinformaticians\nBlackboxes for the end-user\nAssuming ‘perfect’ analyses and data\nManual (meta)data preparation often required\n\nAnalytical ‘Reality’\n\nProject Diversity\nMethods/Platform Diversity\nAnalytical performance/failures\nMistakes\nCommunication wet and dry lab\nProcessing scripts rarely published\n\n\nCommercial tools\n\nMS vendor software\nEXCEL / ‘in-house’ R\n\nPackages for lipidomics\n\nlipidr Mohamed et al. (2020)\n\nPackages for Metabolomics\n\npmp Jankevics et al. (2023)\nmetaX Wen et al. (2017)\ntidyMS Riquelme et al. (2020)\n\nProteomics/Transcriptomics\n\nDiverse Bioconductor packages"
   },
   {
-    "objectID": "index.html#midar---enabling-data-processing-by-the-analysts",
-    "href": "index.html#midar---enabling-data-processing-by-the-analysts",
+    "objectID": "index.html#midar---enabling-data-processing-by-lab-people",
+    "href": "index.html#midar---enabling-data-processing-by-lab-people",
     "title": "rbasel2023",
-    "section": "{MiDAR} - Enabling data processing by the analysts",
-    "text": "{MiDAR} - Enabling data processing by the analysts\n\n\nFor\n\nBioanalytical scientists and\nData scientists\nPublishing\n\nAims\n\nSupervised automation\nFlexible modular steps\nStandaridized and reproducible\nValidated\nData and Process sharing\nTool and libary\n\n\nWorkflow\n\nLab analyses data with {MiDAR}\nLab shares {MiDAR} project file\nData scientists support and amend\n{MiDAR} project file goes back to the lab\n\nChallenges\n\nLearning R\nUser acceptance\nScripts vs UI\nDevelopment Resources\n\n\nhttps://slinghub.github.io/midar/"
+    "section": "{MiDAR} - Enabling data processing by lab people",
+    "text": "{MiDAR} - Enabling data processing by lab people\n\n\nFor\n\nBioanalytical scientists and\nData scientists\nPublishing\n\nAims\n\nSupervised automation\nFlexible modular steps\nStandaridized and reproducible\nValidated\nData and Process sharing\nTool and libary\n\n\nWorkflow\n\nLab people analyse data with {MiDAR}\nLab people share {MiDAR} project file\nData people support and amend\n{MiDAR} project returns to the lab people\n\nChallenges\n\nLearning R\nUser acceptance\nScripts vs UI\nResources for SW development\n\n\nhttps://slinghub.github.io/midar/"
   },
   {
     "objectID": "index.html#data-and-metadata",
@@ -91,25 +91,25 @@
     "text": "Modifiable {MiDAR} outputs\n\nplt &lt;- plot_pca_qc(data = mexp, variable = \"Concentration\", \n                        log_transform = FALSE, dim_x = 1, dim_y = 2)\nggplotly(plt)"
   },
   {
-    "objectID": "index.html#share-data-and-process-steps",
-    "href": "index.html#share-data-and-process-steps",
+    "objectID": "index.html#share-data-and-the-processing-steps",
+    "href": "index.html#share-data-and-the-processing-steps",
     "title": "rbasel2023",
-    "section": "Share data and process steps",
-    "text": "Share data and process steps\n\nprint(mexp)\nsave(mexp, \"D:/my-data/\")\n\n\n\n\n MidarExperiment \n \n   Data:  \n   • Samples:  215 \n   • Features:   428 \n \n   Metadata:  \n   • Sample annotation:  ✓ \n   • Feature annotation:  ✓ \n   • Internal standard annotation:  ✓ \n   • Response curves annotation:  ✓ \n   • Study samples annotation:  ✗ \n \n   Processing status:  Adjusted Quantitated Data \n \n   Processing:  \n   • ISTD normalized:  ✓ \n   • ISTD quantitated:  ✓ \n   • Drift corrected:  ✓ \n   • Batch corrected:  ✗ \n   • Interference (isotope) corrected:  ✗"
+    "section": "Share data and the processing steps",
+    "text": "Share data and the processing steps\n\nprint(mexp)\nsave(mexp, \"D:/my-data/\")\n\n\n\n\n MidarExperiment \n \n   Data:  \n   • Samples:  215 \n   • Features:   428 \n \n   Metadata:  \n   • Sample annotation:  ✓ \n   • Feature annotation:  ✓ \n   • Internal standard annotation:  ✓ \n   • Response curves annotation:  ✓ \n   • Study samples annotation:  ✗ \n \n   Processing status:  Adjusted Quantitated Data \n \n   Processing:  \n   • ISTD normalized:  ✓ \n   • ISTD quantitated:  ✓ \n   • Drift corrected:  ✓ \n   • Batch corrected:  ✗ \n   • Interference (isotope) corrected:  ✗"
   },
   {
     "objectID": "index.html#outlook",
     "href": "index.html#outlook",
     "title": "rbasel2023",
     "section": "Outlook",
-    "text": "Outlook\n\nDevelopment\nCollaborations\nUI (Shiny)"
+    "text": "Outlook\n\nDevelopment\nCollaborations\nUI (Shiny)\n\nInfo\n\nBo Burla bo.burla@nus.edu.sg\nSlides: https://slinghub.github.io/rbasel2023/"
   },
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "rbasel2023",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\n\nR/Basel organizers \nMarkus R. Wenk\nFederico Torta\nHyung Won Choi\nShanshan Ji\nAlicia Chan\nJeremy Selva\nAnne K. Bendt \n\nThis presenstation was made with Quarto with elements taken from https://github.com/garthtarr/sydney_quarto/"
+    "text": "Acknowledgements\n\nR/Basel organizers \nMarkus R. Wenk\nFederico Torta\nHyung Won Choi\nShanshan Ji\nAlicia Chan\nJeremy Selva\nAnne K. Bendt\n\nThis presenstation was made with Quarto with elements taken from https://github.com/garthtarr/sydney_quarto/"
   },
   {
     "objectID": "index.html#references",

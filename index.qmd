@@ -93,11 +93,11 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 ::: {.column width="60%" style="font-size: 24px;"}
 **Issues**
 
--   Limited and static options
+-   Limited and static functions
 -   *By* and *for* bioinformaticians
 -   Blackboxes for the end-user
--   Assuming 'perfect' analyses *and* data
--   Data/metadata preparation often required
+-   Assuming 'perfect' analyses *and* **data**
+-   Manual (meta)data preparation often required
 
 **Analytical 'Reality'**
 
@@ -105,7 +105,8 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 -   Methods/Platform Diversity
 -   Analytical performance/failures
 -   Mistakes
--   Communication wet <> dry lab
+-   Communication wet and dry lab
+-   Processing scripts rarely published
 :::
 
 ::: {.column width="40%" style="font-size: 24px color: #8a8a8a;"}
@@ -131,7 +132,7 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 :::
 :::
 
-## {MiDAR} - Enabling data processing by the analysts {.smaller}
+## {MiDAR} - Enabling data processing by lab people {.smaller}
 
 ::: columns
 ::: {.column width="50%" style="font-size: 28px;"}
@@ -155,17 +156,17 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 
 **Workflow**
 
-- Lab analyses data with {MiDAR}
-- Lab shares {MiDAR} project file
-- Data scientists support and amend
-- {MiDAR} project file goes back to the lab
+- Lab people analyse data with {MiDAR}
+- Lab people share {MiDAR} project file
+- Data people support and amend
+- {MiDAR} project returns to the lab people
 
 **Challenges**
 
 - Learning R
 - User acceptance
 - Scripts vs UI
-- Development Resources
+- Resources for SW development
 :::
 
 ::: footer
@@ -316,7 +317,7 @@ plt <- plot_pca_qc(data = mexp, variable = "Concentration",
 ggplotly(plt)
 ```
 
-## Share data and process steps
+## Share data *and* the processing steps
 
 ```{r}
 #| echo: true
@@ -339,7 +340,12 @@ mexp
 - Collaborations
 - UI (Shiny)
 
-## Acknowledgements
+**Info**
+
+-   Bo Burla [bo.burla@nus.edu.sg](bo.burla@nus.edu.sg) 
+-   Slides:  [https://slinghub.github.io/rbasel2023/](https://slinghub.github.io/rbasel2023/)
+
+## Acknowledgements {.smaller}
 
 - R/Basel organizers
 <br/><br/>
@@ -350,8 +356,9 @@ mexp
 - Alicia Chan
 - Jeremy Selva
 - Anne K. Bendt
-<br/><br/>
 
 This presenstation was made with [Quarto](https://quarto.org/docs/presentations/revealjs/) with  elements taken from [https://github.com/garthtarr/sydney_quarto/](https://github.com/garthtarr/sydney_quarto/)
+
+
 
 ## References {.biblio}
