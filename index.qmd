@@ -11,7 +11,7 @@ format:
     preview-links: auto
     pointer:
       pointerSize: 24
-      color: '#32cd32'
+      color: '#fc2803'
     highlight-style: github
     revealjs-plugins:
       - pointer
@@ -51,9 +51,10 @@ Singapore Lipidomics **Incubator**
 
 ::: columns
 ::: {.column width="70%" style="font-size: 24px;"}
--   Focus on clinical cohort studies   
--   With academia, hospitals, and industry
--   Collaborative or fee-for-service
+-   State of the art facility (mass spec, automation, data processes)
+-   Strong base of skilled/well trained staff
+-   Tusted partner for clinical cohort studies
+-   Clinical translation of assays
 -   NUS-Agilent Hub [(Video)](https://www.youtube.com/watch?v=F_7IUfbDiwo)
 -   Conferences ([isls11.eventengage.live](https://isls11.eventengage.live "International Singapore Lipidomics Symposium"))
 -   Prof Markus R Wenk & Dr Anne K Bendt
