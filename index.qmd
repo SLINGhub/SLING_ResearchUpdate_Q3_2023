@@ -51,8 +51,8 @@ Singapore Lipidomics **Incubator**
 
 ::: columns
 ::: {.column width="70%" style="font-size: 24px;"}
--   State of the art facility (mass spec, automation, data processes)
--   Strong base of skilled/well trained staff
+-   State-of-the art facility (mass spec, automation, data processes)
+-   Strong base of skilled & well-trained staff
 -   Tusted partner for clinical cohort studies
 -   Clinical translation of assays
 -   NUS-Agilent Hub [(Video)](https://www.youtube.com/watch?v=F_7IUfbDiwo)
@@ -63,7 +63,7 @@ More info: [sling.sg](https://sling.sg)
 :::
 
 ::: {.column width="40%" style="font-size: 24px;"}
-![](./images/SLINGphotoISLS2023.png){.absolute top="55" left="600" width="500" height="350"}
+![](./images/SLINGphotoISLS2023.png){.absolute top="55" left="600" width="500" height="400"}
 :::
 :::
 
