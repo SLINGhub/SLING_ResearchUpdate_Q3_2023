@@ -35,18 +35,18 @@
     "text": "Available Tools for Data Post-Processing\n\n\nIssues\n\nLimited and static functions\nBy and for bioinformaticians\nBlackboxes for the end-user\nAssuming ‘perfect’ analyses and data\nManual (meta)data preparation often required\n\nAnalytical ‘Reality’\n\nProject Diversity\nMethods/Platform Diversity\nAnalytical performance/failures\nMistakes\nCommunication wet and dry lab\nProcessing scripts rarely published\n\n\nCommercial tools\n\nMS vendor software\nEXCEL / ‘in-house’ R\n\nPackages for lipidomics\n\nlipidr Mohamed et al. (2020)\n\nPackages for Metabolomics\n\npmp Jankevics et al. (2023)\nmetaX Wen et al. (2017)\ntidyMS Riquelme et al. (2020)\n\nProteomics/Transcriptomics\n\nDiverse Bioconductor packages"
   },
   {
-    "objectID": "index.html#midar---enabling-data-processing-by-lab-people",
-    "href": "index.html#midar---enabling-data-processing-by-lab-people",
-    "title": "rbasel2023",
-    "section": "{MiDAR} - Enabling data processing by lab people",
-    "text": "{MiDAR} - Enabling data processing by lab people\n\n\nFor\n\nBioanalytical scientists and\nData scientists\nPublishing\n\nAims\n\nSupervised automation\nFlexible modular steps\nStandaridized and reproducible\nValidated\nData and Process sharing\nTool and libary\n\n\nWorkflow\n\nLab people analyse data with {MiDAR}\nLab people share {MiDAR} project file\nData people support and amend\n{MiDAR} project returns to the lab people\n\nChallenges\n\nLearning R\nUser acceptance\nScripts vs UI\nResources for SW development\n\n\nhttps://slinghub.github.io/midar/"
-  },
-  {
     "objectID": "index.html#data-and-metadata",
     "href": "index.html#data-and-metadata",
     "title": "rbasel2023",
     "section": "Data and Metadata",
     "text": "Data and Metadata\n\n\nData\n\nVendor peak integration tool outputs\nOpen source tools (e.g. Teo et al. (2020))\nGeneric formats (incl. pre-processed data)\n\nMetadata\n\nAnalyses, Samples, Features, Calibration, exp. groups etc\nCSV or XLS(M) templates (github/slinghub)\nLIMS"
+  },
+  {
+    "objectID": "index.html#midar---enabling-data-processing-by-the-lab",
+    "href": "index.html#midar---enabling-data-processing-by-the-lab",
+    "title": "rbasel2023",
+    "section": "{MiDAR} - Enabling data processing by the lab",
+    "text": "{MiDAR} - Enabling data processing by the lab\n\n\nFor\n\nBioanalytical scientists and\nData scientists\nPublishing\n\nAims\n\nSupervised automation\nFlexible modular steps\nStandaridized and reproducible\nValidated\nData and Process sharing\nTool and libary\n\n\nWorkflow\n\nLab people analyse data with {MiDAR}\nLab people share {MiDAR} project file\nData people support and amend\n{MiDAR} project returns to the lab people\n\nChallenges\n\nLearning R\nUser acceptance\nScripts vs UI\nResources for SW development\n\n\nhttps://slinghub.github.io/midar/"
   },
   {
     "objectID": "index.html#basic-workflow",

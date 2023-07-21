@@ -128,7 +128,29 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 :::
 :::
 
-## {MiDAR} - Enabling data processing by lab people {.smaller}
+## Data and Metadata {.smaller}
+
+::: columns
+::: {.column width="40%" style="font-size: 24px;"}
+**Data**
+
+-   Vendor peak integration tool outputs
+-   Open source tools (e.g. @teo2020MRMkitAutomatedData)
+-   Generic formats (incl. pre-processed data) 
+
+**Metadata**
+
+-   Analyses, Samples, Features, Calibration, exp. groups etc
+-   CSV or XLS(M) templates [(github/slinghub)](https://github.com/SLINGhub/MSTemplate_Creator)
+-   **LIMS**
+:::
+
+::: {.column width="60%" style="font-size: 24px;"}
+![](./images/MSorganizer.jpg){.absolute top="30" left="550" width="450" height="330"} ![](./images/LIMS.jpg){.absolute top="360" left="550" width="455" height="320"}
+:::
+:::
+
+## {MiDAR} - Enabling data processing by the lab {.smaller}
 
 ::: columns
 ::: {.column width="50%" style="font-size: 28px;"}
@@ -170,27 +192,7 @@ Metabolites - Lipids - Signalling molecules - Natural Products - Drugs
 :::
 :::
 
-## Data and Metadata {.smaller}
 
-::: columns
-::: {.column width="40%" style="font-size: 24px;"}
-**Data**
-
--   Vendor peak integration tool outputs
--   Open source tools (e.g. @teo2020MRMkitAutomatedData)
--   Generic formats (incl. pre-processed data) 
-
-**Metadata**
-
--   Analyses, Samples, Features, Calibration, exp. groups etc
--   CSV or XLS(M) templates [(github/slinghub)](https://github.com/SLINGhub/MSTemplate_Creator)
--   **LIMS**
-:::
-
-::: {.column width="60%" style="font-size: 24px;"}
-![](./images/MSorganizer.jpg){.absolute top="30" left="550" width="450" height="330"} ![](./images/LIMS.jpg){.absolute top="360" left="550" width="455" height="320"}
-:::
-:::
 
 
 ```{r }
